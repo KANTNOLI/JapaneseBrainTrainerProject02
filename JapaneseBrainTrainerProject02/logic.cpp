@@ -43,7 +43,7 @@ string output_time(int time) {
 	int min = time % 3600 / 60;
 	int sec = time % 60;
 
-	string msg = to_string(hour);
+	string msg = (hour > 9 ? "" : "0") + to_string(hour);
 	msg += (min > 9 ? ":" : ":0") + to_string(min);
 	msg += (sec > 9 ? ":" : ":0") + to_string(sec);
 
@@ -57,11 +57,11 @@ string output_language(int key) {
 	switch (key) {
 	case 0: msg += "You made a mistake!"; break;
 	case 1: msg += "Enter the number of examples: "; break;
-	case 2: msg += "Do you want to repeat? (Y - Yes / N - No): "; break;
+	case 2: msg += "Do you want to repeat? (1 - Yes / 2 - No): "; break;
 	case 3: msg += "You solved all the examples for: "; break;
 	case 4: msg += "Ты допустил ошибку!"; break;
 	case 5: msg += "Введите кол-во примеров: "; break;
-	case 6: msg += "Вы хотите повторить? (Y - Да / N - Нет): "; break;
+	case 6: msg += "Вы хотите повторить? (1 - Да / 2 - Нет): "; break;
 	case 7: msg += "Вы решили все примеры за: "; break;
 	}
 

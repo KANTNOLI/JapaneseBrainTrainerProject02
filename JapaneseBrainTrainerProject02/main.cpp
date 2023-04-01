@@ -17,10 +17,10 @@ int main() {
 
 		int enter;
 
-		cout << "Choose language / Выберите язык (R - RUS/E - EN)" << endl;
+		cout << "Choose language / Выберите язык (1 - RUS/2 - EN)" << endl;
 		char choose = _getch();
 
-		if (choose == 'r' || choose == 'R') {
+		if (choose == '1') {
 			cout << output_language(5);
 		}
 		else {
@@ -54,7 +54,7 @@ int main() {
 				do
 				{
 
-					if (choose == 'r' || choose == 'R')
+					if (choose == '1')
 					{
 						cout << output_language(4) << endl << to_string(count2) + ": ";
 					}
@@ -76,7 +76,7 @@ int main() {
 		string time = output_time(stop_time - start_time);
 
 
-		if (choose == 'r' || choose == 'R')
+		if (choose == '1')
 		{
 			cout << output_language(7) << time << endl;
 		}
@@ -86,7 +86,7 @@ int main() {
 
 
 
-		if (choose == 'r' || choose == 'R')
+		if (choose == '1')
 		{
 			cout << output_language(6) << endl;
 		}
@@ -97,7 +97,7 @@ int main() {
 		restart = _getch();
 
 		system("cls");
-	} while (restart == 'Y' || restart == 'y');
+	} while (restart == '1');
 
 
 	
